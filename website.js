@@ -1,21 +1,21 @@
 //First  class Section input
-document.getElementById("firstClassCountIncrease").addEventListener("click", function () {
+document.getElementById("firstClassTicketIncrease").addEventListener("click", function () {
     handleFirstClassChange(true);
   });
-document.getElementById("firstClassCountDecrease").addEventListener("click", function () {
+document.getElementById("firstClassTicketDecrease").addEventListener("click", function () {
     handleFirstClassChange(false);
   });
 function handleFirstClassChange(isIncrease) {
-  const firstclassInput = document.getElementById("firstClassInput");
-  const firstclassCount = parseInt(firstclassInput.value);
-  let firstclassNewCount = firstclassCount;
+  const firstClassInput = document.getElementById("firstClassInput");
+  const firstClassTicketCount = parseInt(firstClassInput.value);
+  let firstClassNewCountPer = firstClassTicketCount;
   if (isIncrease == true) {
-    firstclassNewCount = firstclassCount + 1;
+    firstClassNewCountPer = firstClassTicketCount + 1;
   }
-  if (isIncrease == false && firstclassNewCount>0) {
-    firstclassNewCount = firstclassCount - 1;
+  if (isIncrease == false && firstClassNewCountPer>0) {
+    firstClassNewCountPer = firstClassTicketCount - 1;
   }
-  firstclassInput.value = firstclassNewCount;
+  firstClassInput.value = firstClassNewCountPer;
   calculateTotal();
 }
 //End of first class Section
@@ -24,25 +24,25 @@ function handleFirstClassChange(isIncrease) {
 
 
 
-// Economy class Section
+// Economy class Section start
 
-document.getElementById("economyCountIncrease").addEventListener("click", function () {
+document.getElementById("economyClassIncrease").addEventListener("click", function () {
     handleClassChange(true);
   });
-document.getElementById("economyCountDecrease").addEventListener("click", function () {
+document.getElementById("economyClassDecrease").addEventListener("click", function () {
     handleClassChange(false);
   });
 function handleClassChange(isIncrease) {
-  const economyclassInput = document.getElementById("economyClassInput");
-  const economyclassCount = parseInt(economyclassInput.value);
-  let economyClassNewCount = economyclassCount;
+  const economyClassInput = document.getElementById("economyClassInput");
+  const economyClassPer = parseInt(economyClassInput.value);
+  let economyClassNewCount = economyClassPer;
   if (isIncrease == true) {
-    economyClassNewCount = economyclassCount + 1;
+    economyClassNewCount = economyClassPer + 1;
   }
   if (isIncrease == false && economyClassNewCount>0) {
-    economyClassNewCount = economyclassCount - 1;
+    economyClassNewCount = economyClassPer - 1;
   }
-  economyclassInput.value = economyClassNewCount;
+  economyClassInput.value = economyClassNewCount;
   calculateTotal();
 }
 //End of Economy class Section
@@ -51,15 +51,15 @@ function handleClassChange(isIncrease) {
 
 
 
-// Total count Section
+// Total count Section start
 
 function calculateTotal() {
-  const firstclassInput = document.getElementById("firstClassInput");
-  const firstclassCount = parseInt(firstclassInput.value);
-  const economyclassInput = document.getElementById("economyClassInput");
-  const economyclassCount = parseInt(economyclassInput.value);
+  const firstClassInput = document.getElementById("firstClassInput");
+  const firstClassCount = parseInt(firstClassInput.value);
+  const economyClassInput = document.getElementById("economyClassInput");
+  const economyClassCount = parseInt(economyClassInput.value);
 
-  const subtotalPrice = firstclassCount * 150 + economyclassCount * 100;
+  const subtotalPrice = firstClassCount * 150 + economyClassCount * 100;
   document.getElementById("subtotal").innerText = subtotalPrice;
   const vat = Math.round(subtotalPrice * 0.1);
   document.getElementById("vat-amount").innerText = vat;
@@ -70,9 +70,3 @@ function calculateTotal() {
 
 
 
-// Alert 
-function showAlert(){
-    alert("Confirm to book your ticket?");
-}
-
-// End of Alert
