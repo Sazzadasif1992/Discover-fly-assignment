@@ -7,13 +7,15 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
+    
+}
+#first-section{
     background:url("images/bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
 }
-
 nav{
     height: 50px;
     width: 100%;
@@ -124,4 +126,11 @@ footer{
     font-weight: 400;
     margin-top: 20px;
     color: rgb(255, 255, 255);
+}
+#second-section{
+
+
+    text-align: center;
+    margin-top: 200px;
+    height: 500px;
 }

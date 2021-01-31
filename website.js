@@ -69,4 +69,14 @@ function calculateTotal() {
 //End of Total count Section
 
 
+ document.getElementById('second-section').style.display = "none";
+
+
+ document.getElementById("booking").addEventListener('click' , function(){
+
+  document.getElementById('second-section').style.display = "inline";
+  document.getElementById('first-section').style.display = "none";
+ })
+
+
 
